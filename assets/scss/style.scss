@@ -1,0 +1,825 @@
+@import "../bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/*--------------------------------------------Todas las Variables-------------------------------------------- */
+
+$size70banner: 70px;
+$h1: 2.44rem;
+$h2: 1.95rem;
+$h3: 1.56rem;
+$h4: 1.25rem;
+$parrafo: 1rem;
+$azul: #0068B1;
+$celeste: #00B9FF; 
+$amarillo: #FFCB42;
+$blanco: #ffff;
+$accent:#FF2973;
+$negro:#212529;
+$Montserrat: "Montserrat", sans-serif;
+
+body{
+  font-size: $parrafo;
+  font-family: $Montserrat;
+}
+section{
+  padding: 75px 0px;
+}
+h1{
+  font-size: $h1;
+  font-weight: bold;
+}
+h2{
+  font-size: $h2;
+  font-weight: bold;
+}
+h3{
+  font-size: $h3;
+  font-weight: bold;
+}
+h4{
+  font-size: $h4;
+  font-weight: bold;
+}
+p{
+  font-size: $parrafo;
+  font-weight: normal;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+}
+.primary{
+  color: $azul;
+}
+.secondary{
+  color: $amarillo;
+}
+.accent{
+  color: $accent;
+}
+.italica{
+  font-style: italic;
+}
+.img-noticia{
+  background-position: center;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+.bg-azul{
+  background-color: $azul;
+  color: white;
+}
+
+/* Botones */
+  /* Boton Normal */
+  .boton-normal {
+    width: 154px;
+    height: 50px;
+    color: $blanco;
+    padding: 10px 25px;
+    font-family: $Montserrat;
+    font-weight: 500;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    
+    outline: none;
+  }
+.boton-rojo-normal {
+    width: 154px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    border: none;
+    background: #FF2973;
+  background: linear-gradient(0deg, #FF2973 0%,#FF2973 100%);
+  }
+  .boton-rojo-normal:hover {
+    color: #FF2973;
+    background: transparent;
+     box-shadow:none;
+  }
+  .boton-rojo-normal:before,
+  .boton-rojo-normal:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #FF2973;
+   
+    transition:400ms ease all;
+  }
+  .boton-rojo-normal:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .boton-rojo-normal:hover:before,
+  .boton-rojo-normal:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  
+/* Boton Formulario */
+.boton-form {
+    width: 300px;
+    height: 50px;
+    color: $blanco;
+    padding: 10px 25px;
+    font-family: $Montserrat;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .boton-rojo-form {
+    width: 300px;
+    height: 50px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #FF2973;
+  background: linear-gradient(0deg, #FF2973 0%,#FF2973 100%);
+  &:hover {
+    color: #FF2973;
+    background: transparent;
+     box-shadow:none;
+  }
+  }
+  .boton-rojo-form:before,
+  .boton-rojo-form:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #FF2973;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .boton-rojo-form:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .boton-rojo-form:hover:before,
+  .boton-rojo-form:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  @media (max-width: 565px) {
+    .boton-form {
+      width: 324px;
+    }
+    .boton-rojo-form {
+      width: 324px;
+    }
+  }
+
+  /* Boton Pagos (index) */
+
+  .boton-pagos {
+    width: 230px;
+    height: 75px;
+    color: #fff;
+    padding: 10px 25px;
+    font-family: $Montserrat;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .boton-rojo-pagos {
+    width: 230px;
+    height: 75px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #FF2973;
+  background: linear-gradient(0deg, #FF2973 0%,#FF2973 100%);
+  }
+  .boton-rojo-pagos:hover {
+    color: #FF2973;
+    background: transparent;
+     box-shadow:none;
+  }
+  .boton-rojo-pagos:before,
+  .boton-rojo-pagos:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #FF2973;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .boton-rojo-pagos:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .boton-rojo-pagos:hover:before,
+  .boton-rojo-pagos:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+/*--------------------------------------------Fin de las Variables--------------------------------------------*/
+
+/*--------------------------------------------Pantalla Login--------------------------------------------*/
+
+.login{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/banner.jpg");
+    position: relative;
+    &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, $azul, $celeste);
+        opacity: 0.4;
+    }
+}
+.login-box{
+    min-width: 400px;
+    position: relative;
+    background-color: white;
+    .login-icon{
+        height: 30px;
+        .fa-google{
+            color: #AE3224;
+        }
+        .fa-twitter{
+            color: #0068B1;
+        }
+    }
+}
+
+/*--------------------------------------------Fin de la Pantalla login--------------------------------------------*/
+
+/*--------------------------------------------Header Completo-------------------------------------------- */
+
+.header-menu{
+    background-image: url("../img/banner-hs.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    height: 700px;
+    background-size: cover;
+    position: relative;
+    .box-container{
+        height: 500px;
+        position: relative;
+        .header-box{
+            position: absolute;
+            bottom: 0;
+            span{
+                font-size: 3.5rem;
+            }
+        }
+    }
+    
+    &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, $azul, $celeste);
+        opacity: 0.4;
+    }
+    li:hover  .nav-link{
+        color: $amarillo !important;
+    }
+    a:hover{
+        color: $amarillo;
+    }
+    .active{
+        color: $amarillo !important;
+    }
+    .turismo{
+        background-color: $accent;
+    }
+    
+}
+
+
+
+@media screen and (max-width:768px){
+    .header-menu{
+        nav{
+            background-color: $negro;
+            color: white;
+        }
+    }
+    .dropdown-menu{
+        border: none;
+        background-color: $negro;
+        .dropdown-item{
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+/*-------------------------------------------- Fin del Header--------------------------------------------*/
+
+/*-------------------------------------------- Scss del Home--------------------------------------------*/
+.noticias{
+    a{
+        &:hover h3 {
+            color: $accent;
+        }
+        &:hover h4 {
+            color: $accent;
+        }
+
+    }
+    padding-top: none;
+    .noticias-secundarias{
+        .row{
+            padding: 0 !important;
+        }
+    }
+    .imagen-noticia-secundaria{
+        object-fit: cover;
+        width: 100%;
+    }
+    .texto-noticia-secundaria{
+        height: 100px;
+
+    }
+    .noticia-principal{
+        min-height: 350px;
+    }
+}
+.muni-transparente{
+    background-image: url("../img/transparente.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+    .muni-texto{
+        position: relative;
+        h2{
+            text-align: center;
+            text-transform: capitalize;
+        }
+        a{
+            display: block;
+            text-align: left;
+            color: $blanco;
+            &:hover{
+                color: $amarillo;
+            }
+        }
+
+    }
+    &::before{
+        content: "";
+        background: $azul;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+    }
+}
+.conociendo{
+    text-align: center;
+    .conociendo-img{
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+        
+        color: $azul;
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+        
+    }
+    .img-doble{
+        height: 250px;
+    }
+}
+.planes{
+    background-color: $azul;
+    color: $blanco;
+    h3{
+        text-align: center;
+    }
+    img{
+        width: 324px;
+        height: 325px;
+        object-fit: cover;
+    }
+    span{
+        font-weight: 600;
+        color: $blanco;
+        text-align: left;
+    }
+}
+.home-pagos{
+    h3{
+        text-align: center;
+        text-transform: capitalize;
+        color: $azul;
+    }
+    .link-pago{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $azul;
+        height: 100px;
+        max-width: 200px;
+        min-width: 200px;
+        text-transform: capitalize;
+        border: 2px solid $azul;
+        -webkit-transition:all .2s linear;
+        -o-transition:all .2s linear;
+        transition:all .2s linear;
+        &:hover{
+            background-color: $accent;
+            color: $blanco;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+             transition:all .2s linear
+        }
+    }
+}
+
+/*--------------------------------------------Fin del Scss del Home--------------------------------------------*/
+
+/*--------------------------------------------Scss completo de Gerald--------------------------------------------*/
+
+/* Main de Nuestra Ciudad */
+
+main {
+    font-family: $Montserrat;
+    margin-top: 75px;
+}
+.nuestra-ciudad-main h2 {
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: $azul;
+}
+.nuestra-ciudad-main .bg-lugar-espectacular {
+    background: url(./../img/Grupo-131.png);
+    background-position: center center;
+    background-size: cover;
+}
+.nuestra-ciudad-main .bg-lugar-espectacular  .h3-blanco {
+    color: $blanco;
+    font-weight: 600;
+}
+.reseña-historica h2 {
+    color: $azul;
+}
+.te-puede-interesar img{
+  -webkit-transition:all .3s ease;
+  -o-transition:all .3s ease;
+  transition:all .3s ease;
+  &:hover {
+    box-shadow: 5px 0px 5px 5px rgba(0,0,0,0.4);
+    -webkit-transition:all .3s ease;
+  -o-transition:all .3s ease;
+  transition:all .3s ease;
+  }
+}
+/* Fin del Main de Nuestra Ciudad */
+
+/* Main del Permiso de Circulación */
+
+.permiso-renovacion-main .notas-importantes {
+  background: url(./../img/Grupo-132.png);
+  background-position: center center;
+  background-size: cover;
+}
+.formulario-completo h2{
+  color: $azul;
+}
+.formulario-completo a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+  &:hover {
+    color: $celeste;
+    text-decoration: none;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+  }
+}
+.formulario-completo .formulario {
+  position: relative;
+}
+.formulario-completo .formulario .question-placa {
+  position: absolute;
+  top: 27%;
+  right: 2%;
+}
+.formulario-completo .formulario .question-rut {
+  position: absolute;
+  bottom: 8%;
+  right: 2%;
+}
+.formulario-completo ul {
+  list-style: none;
+}
+.formulario-completo .solicitudes {
+  margin-top: 100px;
+}
+/* Main del Reloj de Flores */
+
+.reloj-de-flores-main h1{
+  color: $azul;
+  font-weight: 600;
+}
+.reloj-de-flores-main h3{
+  color: $azul;
+  font-weight: 600;
+}
+.visitar-lugares {
+  background: url(./../img/Grupo-140.png);
+  background-size: cover;
+  background-position: center center;
+}
+/* Fin del Main del Reloj de Flores*/
+
+/* Footer */
+
+.site-footer
+{
+  background:url(./../img/Grupo-130.png);
+  background-size: cover;
+  background-position: center center;
+  padding: 45px 0 20px;
+  font-size: $parrafo;
+  font-family: $Montserrat;
+  line-height:24px;
+  color: $blanco;
+}
+.site-footer hr
+{
+  border-top-color: $blanco;
+  opacity:4
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color: $blanco;
+  font-size:16px;
+  margin-top:10px;
+  margin-bottom: 45px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color: $blanco;
+  text-decoration: none;
+}
+.site-footer a:hover
+{
+  color:#00B9FF;
+  text-decoration: none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block;
+  margin-top: 22px;
+}
+.footer-links a
+{
+  color: $blanco;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color: $celeste;
+  text-decoration:none;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.footer-links.inline li
+{
+  display:inline-block;
+  margin-top: 22px;
+}
+.site-footer .social-icons
+{
+  text-align:left
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:transparent;
+}
+.site-footer .logo-blanco
+{
+  left: 37%;
+  bottom: 10%;
+
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0;
+  }
+  .site-footer .logo-blanco {
+    left: 15%;
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color: $blanco;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align: center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color: $blanco;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.instagram:hover
+{
+  background-color: #C13584
+}
+.social-icons a.youtube:hover
+{
+  background-color: red
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+/* Fin del Footer */
+
+
+/*--------------------------------------------Fin del Scss completo de Gerald--------------------------------------------*/
+
+/*--------------------------------------------Turismo--------------------------------------------*/
+.portal-turistico{
+    height: 500px;
+    margin-top: 75px;
+    img{
+        height: 560px;
+        object-fit: cover;
+        transform: translateY(-100px);
+    }
+    .portal-text{
+        height: 500px;
+        transform: translateY(-80px);
+    }
+}
+.lugar-emblema{
+    a:hover span{
+        background-color: $accent;
+    }
+    figure{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    img{
+        transform: scale(1.2);
+        transition: .3s ease-in-out;
+        &:hover{
+            transform: scale(1);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portal-turistico{
+        height: auto;
+        img{
+            transform: none;
+            height: auto;
+        }
+        .portal-text{
+            padding-top: 20px;
+            height: auto;
+            transform: none;
+        }
+    }
+}
+/*--------------------------------------------Fin de Turismo--------------------------------------------*/
